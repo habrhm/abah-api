@@ -39,7 +39,9 @@ require("./config/passport")(passport);
 app.use("/api/user", users);
 // app.use("/api/ads", ads);
 
-
+app.get('/', (req, res) => {
+   res.send('Hello');
+});
 const port = process.env.PORT || 8080;
 
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));
